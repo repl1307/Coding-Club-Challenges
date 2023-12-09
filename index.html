@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Coding Challenges</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="default.css" type="text/css" />
+  <script src="highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <h1 id="title">Coding Challenges Solutions</h1>
+  <div class="challenge-container" id="challenge #1">
+    <h2>Challenge #1</h2>
+    <p><b>Age to Day Function</b></p>
+    <p>Write a function that given a person’s age in years, returns an 
+      integer representing their age in days.</p>
+    <p>Sample Input: 18</p>
+    <!-- challenge 1 headers -->
+    <div class="tab-header">
+      <button class="selected">Python</button>
+      <button>Javascript</button>
+      <button>Java</button>
+    </div>
+    <!-- challenge 1 tabs -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def age_to_days(age):
+  return age * 365
+</code></pre>
+<pre><code class="language-javascript">
+function ageToDays(age){
+  return age * 365;
+}
+</code></pre>
+<pre><code class="language-java">
+public int ageToDays(int age){
+  return age * 365;
+}
+</code></pre>
+    </div>    
+  </div>
+  <!-- challenge 2 -->
+  <div class="challenge-container">
+    <h2>Challenge #2</h2>
+    <p><b>Area of a Triangle</b></p>
+    <p>Write a function that returns the area of a triangle given the base and height.
+    <br>Formula for a triangle’s area:
+    <br>&nbsp;&nbsp;&nbsp;(Base * Height) /2
+    </p>
+    <p>Sample Input: 8, 4</p>
+    <div class="tab-header">
+        <button class="selected">Python</button>
+        <button>Javascript</button>
+        <button>Java</button>
+      </button>
+    </div>
+    <!-- challenge #2 coding blocks -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def area_of_triangle(base, height):
+  return base * height / 2
+</code></pre>
+<pre><code class="language-javascript">
+function areaOfTriangle(base, height){
+  return base * height / 2;
+}
+</code></pre>
+<pre><code class="language-java">
+public double areaOfTriangle(double base, double height){
+  return base * height / 2;
+}
+</code></pre>
+    </div>
+  </div>
+<!-- challenge 3 -->
+  <div class="challenge-container">
+    <h2>Challenge #3</h2>
+    <p><b>Find the Biggest & Smallest Numbers</b></p>
+    <p>Write a function that returns the smallest and largest number in an array
+    <br>The return value must be an array
+    </p>
+    <p>Sample Input: [11, 4, 3, 7, 1, 8]</p>
+    <div class="tab-header">
+        <button class="selected">Python</button>
+        <button>Javascript</button>
+        <button>Java</button>
+      </button>
+    </div>
+    <!-- challenge #3 coding blocks -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def min_max(array):
+  min = array[0]
+  max = array[0]
+  for i in range(len(array)):
+    if array[i] < min:
+      min = array[i]
+    if array[i] > max:
+      max = array[i]
+  return [min, max]
+</code></pre>
+<pre><code class="language-javascript">
+function minMax(array){
+  let min = array[0];
+  let max = array[0];
+  for(const num in array){
+    if(num < min)
+      min = num;
+    if(num > max)
+      max = num;
+  }
+  return [min, max];
+}
+</code></pre>
+<pre><code class="language-java">
+import java.util.ArrayList;
+
+public ArrayList&lt;Double&gt; minMax(ArrayList&lt;Double&gt; array){
+  double min = array.get(0);
+  double max = array.get(0);
+  for(int i = 0; i < array.size(); i++){
+    if(array.get(i) < min)
+      min = array.get(i);
+    if(array.get(i) > max)
+      max = array.get(i);
+  }
+  ArrayList&lt;Double&gt; minMaxArray = new ArrayList&lt;Double&gt;();
+  minMaxArray.add(min);
+  minMaxArray.add(max);
+  return minMaxArray;
+}
+</code></pre>
+    </div>
+  </div>
+<!-- challenge 4 -->
+  <div class="challenge-container">
+    <h2>Challenge #4</h2>
+    <p><b>How Much is True?</b></p>
+    <p>Write a function that returns the number of times an
+      array contains the boolean value <b style="background-color: rgba(0, 0, 0, 0.25); padding: 3px 5px; border-radius: 5px;">true</b>
+    </p>
+    <p>Sample Input: [true, false, true, true]</p>
+    <div class="tab-header">
+        <button class="selected">Python</button>
+        <button>Javascript</button>
+        <button>Java</button>
+      </button>
+    </div>
+    <!-- challenge #4 coding blocks -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def count_true(array):
+  count = 0
+  for bool in array:
+    if bool:
+      count += 1
+  return count
+</code></pre>
+<pre><code class="language-javascript">
+function countTrue(array){
+  let count = 0;
+  for(const bool of array){
+    if(bool)
+      count++;
+  }
+  return count;
+}
+</code></pre>
+<pre><code class="language-java">
+import java.util.ArrayList;
+
+public int countTrue(ArrayList&lt;Boolean&gt; array){
+  int count = 0;
+  for(Boolean b : array){
+    if(b)
+      count++;
+  }
+  return count;
+}
+</code></pre>
+    </div>
+  </div>
+<!-- challenge 5 -->
+  <div class="challenge-container">
+    <h2>Challenge #5</h2>
+    <p><b>Oddish or Evenish?</b></p>
+    <p>Create a function that determines whether a number is <b>Oddish</b> or <b>Evenish</b>.
+      A number is <b>Oddish</b> if the sum of all of its digits is odd, and a number is <b>Evenish</b> if
+      the sum of all of its digits is even. If a number is <b>Oddish</b>, 
+      return <b>"Oddish"</b>. Otherwise, return <b>"Evenish"</b>.
+    </p>
+    <p>Sample Input: 387432</p>
+    <div class="tab-header">
+        <button class="selected">Python</button>
+        <button>Javascript</button>
+        <button>Java</button>
+      </button>
+    </div>
+    <!-- challenge #5 coding blocks -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def oddish_or_evenish(num):
+  total = 0
+  for char in str(num):
+    total += int(char)
+  return "Evenish" if total % 2 == 0 else "Oddish"
+</code></pre>
+<pre><code class="language-javascript">
+function evenishOrOddish(num){
+  let total = 0;
+  for(const char of num.toString()){
+    total += parseInt(char);
+  }
+  return total % 2 == 0? "Evenish" : "Oddish";
+}
+</code></pre>
+<pre><code class="language-java">
+public String evenishOrOddish(int num){
+  int total = 0;
+  String numStr = num+"";
+  for(int i = 0; i < numStr.length(); i++){
+    total += Integer.parseInt(numStr.charAt(i)+"");
+  }
+  return total % 2 == 0? "Evenish" : "Oddish";
+}
+</code></pre>
+    </div>
+  </div>
+<!-- challenge 6 -->
+  <div class="challenge-container">
+    <h2>Challenge #6</h2>
+    <p><b>Military Time</b></p>
+    <p>Write a function that receives the time in 12-hour AM/PM format 
+      and returns a string representation of the time in military 
+      (24-hour) format.
+    <br> Note: 00:00:00 is midnight in military time
+    </p>
+    <p>Sample Input: "12:32:05AM"</p>
+    <div class="tab-header">
+        <button class="selected">Python</button>
+        <button>Javascript</button>
+        <button>Java</button>
+      </button>
+    </div>
+    <!-- challenge #6 coding blocks -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def convert_time(standardTime):
+  h = int(standardTime[0:2])
+  suffix = standardTime[-2:]
+  if suffix.lower() == 'pm':
+    h += 12
+  if h == 24:
+    h = 0;
+  h = "0"+str(h) if h < 10 else str(h)
+  return h + standardTime[2:-2];
+  
+</code></pre>
+<pre><code class="language-javascript">
+function convertTime(standardTime){
+  let h = parseInt(standardTime.substring(0, 2));
+  let suffix = standardTime.substring(standardTime.length-2, standardTime.length);
+  if(suffix.toLowerCase() == 'pm')
+    h += 12;
+  if(h == 24)
+    h = 0;
+  if(h < 10)
+    h = "0"+h;
+  return h+standardTime.substring(2, standardTime.length-2);
+}
+</code></pre>
+<pre><code class="language-java">
+public String convertTime(String standardTime){
+  int h = Integer.parseInt(standardTime.substring(0, 2));
+  String suffix = standardTime.substring(standardTime.length()-2, standardTime.length());
+  if(suffix.toLowerCase().equals("pm"))
+    h += 12;
+  if(h == 24)
+    h = 0;
+
+  if(h < 10)
+     return "0"+h+standardTime.substring(2, standardTime.length()-2);
+  else
+    return h+standardTime.substring(2, standardTime.length()-2);
+}
+</code></pre>
+    </div>
+  </div>
+<!-- challenge 7 -->
+  <div class="challenge-container">
+    <h2>Challenge #7</h2>
+    <p><b>Working 9-5</b></p>
+    <p>Write a function that calculates overtime and pay associated with overtime.
+      <br>Working 9 to 5: regular hours
+      <br>After 5 PM is overtime
+      <br><br>Your function gets an array with 4 values:
+      <br>&nbsp;&nbsp;&nbsp;Start of working day, in 24-hour notation
+      <br>&nbsp;&nbsp;&nbsp;End of working day. (Same format)
+      <br>&nbsp;&nbsp;&nbsp;Hourly rate
+      <br>&nbsp;&nbsp;&nbsp;Overtime multiplier
+      <br><br>Your function should spit out:
+      <br>&nbsp;&nbsp;&nbsp;$ + earned that day (rounded to the hundredths)
+    </p>
+    <p>Sample Input: [12.75, 17.5, 11, 1.25]</p>
+    <div class="tab-header">
+        <button class="selected">Python</button>
+        <button>Javascript</button>
+        <button>Java</button>
+    </div>
+    <!-- challenge #7 coding blocks -->
+    <div class="tab-container">
+<pre class="selected"><code class="language-python">
+def over_time(workDayInfo):
+  hours_worked = workDayInfo[1] - workDayInfo[0]
+  hourly_rate = workDayInfo[2]
+  over_time_multiplier = workDayInfo[3]
+  work_day_pay = hours_worked * hourly_rate
+  over_time_pay = 0
+  if hours_worked > 9:
+    over_time_pay = (hours_worked-8)*(hourly_rate * over_time_multiplier)
+    work_day_pay = (8 * hourly_rate)
+  return "$"+str("%.2f" % round(work_day_pay + over_time_pay, 2))
+</code
+</code></pre>
+<pre><code class="language-javascript">
+function overTime(workDayInfo){
+  const hoursWorked = workDayInfo[1] - workDayInfo[0];
+  const hourlyRate = workDayInfo[2];
+  const overTimeMultiplier = workDayInfo[3];
+  let workDayPay = hourlyRate * hoursWorked;
+  let overTimePay = 0;
+  if(hoursWorked > 9){
+    overTimePay = (hoursWorked - 8) * (hourlyRate * overTimeMultiplier);
+    workDayPay = hourlyRate * 8;
+  }
+  return "$"+(workDayPay + overTimePay).toFixed(2);
+}
+</code></pre>
+<pre><code class="language-java">
+public String overTime(double[] workDayInfo){
+  double hoursWorked = workDayInfo[1] - workDayInfo[0];
+  double hourlyRate = workDayInfo[2];
+  double overTimeMultiplier = workDayInfo[3];
+  double workDayPay = hourlyRate * hoursWorked;
+  double overTimePay = 0;
+  if(hoursWorked > 9){
+    overTimePay = (hoursWorked - 8) * (hourlyRate * overTimeMultiplier);
+    workDayPay = hourlyRate * 8;
+  }
+  return "$"+String.format("%.2f", workDayPay + overTimePay);
+}
+</code></pre>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
